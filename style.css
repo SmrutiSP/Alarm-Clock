@@ -1,0 +1,147 @@
+#alarmContainer {
+  width: 300px;
+  height: 400px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+#setAlarmContainer {
+  height: 25%;
+}
+
+#currTimeContainer {
+  text-align: center;
+  border-bottom: 1px solid black;
+  height: 25%;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: consolas, serif, sans-serif;
+}
+
+.timeWithButton {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.timeWithButton .time {
+  max-width: 40px;
+  text-align: center;
+}
+
+.setAlarmButton,
+.deleteAlarmButton {
+  min-width: 70px;
+  height: 20px;
+  border: 2px solid black;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.deleteAlarmButton:hover {
+  background-color: rgb(203, 0, 0);
+}
+
+.setAlarmButton:hover {
+  background-color: rgb(27, 203, 0);
+}
+
+#prevSetAlarmContainer {
+  text-align: center;
+  overflow-y: auto;
+  height: 50%;
+}
+
+#prevSetAlarmContainer ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+@keyframes deleteAnimation {
+  0% {
+    background-color: red;
+    transform: rotateZ(8deg) translateX(-50%);
+  }
+  10% {
+    background-color: rgb(243, 179, 179);
+    transform: rotateZ(-8deg) translateX(-50%);
+  }
+  20% {
+    background-color: red;
+    transform: rotateZ(8deg) translateX(-50%);
+  }
+  30% {
+    background-color: rgb(243, 179, 179);
+    transform: rotateZ(-8deg) translateX(-50%);
+  }
+  40% {
+    background-color: red;
+    transform: rotateZ(8deg) translateX(-50%);
+  }
+  50% {
+    background-color: rgb(243, 179, 179);
+    transform: rotateZ(-8deg) translateX(-50%);
+  }
+  60% {
+    background-color: red;
+    transform: rotateZ(8deg) translateX(-50%);
+  }
+  70% {
+    background-color: rgb(243, 179, 179);
+    transform: rotateZ(-8deg) translateX(-50%);
+  }
+  80% {
+    background-color: red;
+    transform: rotateZ(8deg) translateX(-50%);
+  }
+  90% {
+    background-color: rgb(243, 179, 179);
+    transform: rotateZ(-8deg) translateX(-50%);
+  }
+  100% {
+    background-color: red;
+    transform: rotateZ(8deg) translateX(-50%);
+  }
+}
+
+.alertMessageShow {
+  width: 300px;
+  height: 80px;
+  font-size: 50px;
+  font-weight: bold;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  color: transparent;
+  position: fixed;
+  z-index: 2;
+  top: 10px;
+  left: 50vw;
+  background-color: bisque;
+  animation-name: deleteAnimation;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1000ms;
+  animation-delay: 0ms;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.alertMessageHide {
+  display: none;
+}
